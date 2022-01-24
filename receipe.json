@@ -1,0 +1,752 @@
+{
+    "preloader": {
+        "id": "preloader",
+        "class": "circle-preloader",
+        "img": "data:image/webp;base64,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"
+    },
+    "search Wrapper": {
+        "class": "Search Wrapper",
+        "form": {
+            "method": "Post"
+        },
+        "input": [
+            {
+                "name": "Search",
+                "type": "Search",
+                "placeholder": "Type Any Kerwords..."
+            }
+        ],
+        "button": [
+            {
+                "type": "submit",
+                "icon": "fa fa-search"
+            },
+            {
+                "type": "close-btn",
+                "icon": "fa fa-times"
+            }
+        ]
+    },
+    "header": [
+        {
+            "topHeader": [
+                {
+                    "item": {
+                        "name": "breakingNews",
+                        "class": "breaking-news",
+                        "id": "breakingNewsTicker",
+                        "text": [
+                            {
+                                "Itemtext": [
+                                    {
+                                        "text": "Hello World!",
+                                        "url": "#"
+                                    }
+                                ]
+                            },
+                            {
+                                "Itemtext": [
+                                    {
+                                        "text": "Wellcome to Colorlib Family",
+                                        "url": "#"
+                                    }
+                                ]
+                            },
+                            {
+                                "Itemtext": [
+                                    {
+                                        "text": "Hello Delicious!",
+                                        "url": "#"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "item": {
+                        "name": "social-media",
+                        "class": "top-social-info text-right",
+                        "icon": [
+                            {
+                                "name": "pinterest",
+                                "class": "fa fa-pinterest",
+                                "aria-hidden": true
+                            },
+                            {
+                                "name": "facebook",
+                                "class": "fa fa-facebook",
+                                "aria-hidden": true
+                            },
+                            {
+                                "name": "twitter",
+                                "class": "fa fa-twitter",
+                                "aria-hidden": true
+                            },
+                            {
+                                "name": "dribbble",
+                                "class": "fa fa-dribbble",
+                                "aria-hidden": true
+                            },
+                            {
+                                "name": "behance",
+                                "class": "fa fa-behance",
+                                "aria-hidden": true
+                            },
+                            {
+                                "name": "linkedin",
+                                "class": "fa fa-linkedin",
+                                "aria-hidden": true
+                            }
+                        ]
+                    }
+                }
+            ],
+            "navbar": [
+                {
+                    "nav-item": [
+                        {
+                            "class": "nav-brand",
+                            "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                            "img": {
+                                "url": "data:image/webp;base64,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"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "nav-item": [
+                        {
+                            "text": "Home",
+                            "class": "active",
+                            "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                            "attr": null
+                        },
+                        {
+                            "text": "Pages",
+                            "class": null,
+                            "url": null,
+                            "attr": [
+                                {
+                                    "name": "dropdown-menu",
+                                    "class": "classy-menu",
+                                    "item": [
+                                        {
+                                            "text": "Home",
+                                            "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "About Us",
+                                            "url": "https://preview.colorlib.com/theme/delicious/about.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "Blog Post",
+                                            "url": "https://preview.colorlib.com/theme/delicious/blog-post.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "Receipe Post",
+                                            "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "Contact",
+                                            "url": "https://preview.colorlib.com/theme/delicious/contact.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "Elements",
+                                            "url": "https://preview.colorlib.com/theme/delicious/elements.html",
+                                            "attr": null
+                                        },
+                                        {
+                                            "text": "Dropdown",
+                                            "url": "#",
+                                            "attr": [
+                                                {
+                                                    "text": "Home",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "About Us",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/about.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "Blog Post",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/blog-post.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "Receipe Post",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "Contact",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/contact.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "Elements",
+                                                    "url": "https://preview.colorlib.com/theme/delicious/elements.html",
+                                                    "attr": null
+                                                },
+                                                {
+                                                    "text": "Dropdown",
+                                                    "url": "#",
+                                                    "attr": [
+                                                        {
+                                                            "text": "Home",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "About Us",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/about.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "Blog Post",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/blog-post.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "Receipe Post",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "Contact",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/contact.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "Elements",
+                                                            "url": "https://preview.colorlib.com/theme/delicious/elements.html",
+                                                            "attr": null
+                                                        },
+                                                        {
+                                                            "text": "Dropdown",
+                                                            "url": "#",
+                                                            "attr": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Mega Menu",
+                            "class": "megamenu",
+                            "url": null,
+                            "attr": {
+                                "text": "Catagory",
+                                "class": "title",
+                                "megaitem": [
+                                    {
+                                        "text": "Home",
+                                        "url": "https://preview.colorlib.com/theme/delicious/index.html",
+                                        "attr": null
+                                    },
+                                    {
+                                        "text": "About Us",
+                                        "url": "https://preview.colorlib.com/theme/delicious/about.html",
+                                        "attr": null
+                                    },
+                                    {
+                                        "text": "Blog Post",
+                                        "url": "https://preview.colorlib.com/theme/delicious/blog-post.html",
+                                        "attr": null
+                                    },
+                                    {
+                                        "text": "Receipe Post",
+                                        "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                                        "attr": null
+                                    },
+                                    {
+                                        "text": "Contact",
+                                        "url": "https://preview.colorlib.com/theme/delicious/contact.html",
+                                        "attr": null
+                                    },
+                                    {
+                                        "text": "Elements",
+                                        "url": "https://preview.colorlib.com/theme/delicious/elements.html",
+                                        "attr": null
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "text": "Receipes",
+                            "class": null,
+                            "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                            "attr": null
+                        },
+                        {
+                            "text": "4 Vegans",
+                            "class": null,
+                            "url": "https://preview.colorlib.com/theme/delicious/receipe-post.html",
+                            "attr": null
+                        },
+                        {
+                            "text": "Contact",
+                            "class": null,
+                            "url": "https://preview.colorlib.com/theme/delicious/contact.html",
+                            "attr": null
+                        },
+                        {
+                            "text": null,
+                            "class": "search-btn",
+                            "url": null,
+                            "attr": {
+                                "class": "fa fa-search",
+                                "aria-hidden": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "body": [
+        {
+            "breadcumb-area": {
+                "class": "breadcumb-area bg-img bg-overlay",
+                "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xbreadcumb3.jpg.pagespeed.ic.OfJVaE48PU.webp",
+                "text": "Recipe"
+            }
+        },
+        {
+            "receipe-post-area": [
+                {
+                    "receipe-post-search": {
+                        "class": "container",
+                        "form": {
+                            "method": "Post"
+                        },
+                        "attr": [
+                            {
+                                "item": [
+                                    {
+                                        "name": "select1",
+                                        "id": "select1",
+                                        "item": [
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 2",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 3",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 4",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 5",
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "name": "select1",
+                                        "id": "select2",
+                                        "item": [
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 2",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 3",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 4",
+                                                    "value": 1
+                                                }
+                                            },
+                                            {
+                                                "item": {
+                                                    "text": "All Receipies Categories 5",
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "name": "search",
+                                        "input": {
+                                            "type": "Search",
+                                            "placeholder": "Search Receipies"
+                                        },
+                                        "button": {
+                                            "type": "submit",
+                                            "class": "btn delicious-btn",
+                                            "text": "Search"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "receipe-slider": {
+                        "img": [
+                            {
+                                "url": "https://preview.colorlib.com/theme/delicious/img/bg-img/xbg5.jpg.pagespeed.ic.hCK-5hZjgk.webp"
+                            },
+                            {
+                                "url": "https://preview.colorlib.com/theme/delicious/img/bg-img/xbg5.jpg.pagespeed.ic.hCK-5hZjgk.webp"
+                            },
+                            {
+                                "url": "https://preview.colorlib.com/theme/delicious/img/bg-img/xbg5.jpg.pagespeed.ic.hCK-5hZjgk.webp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "receipe-content-area": [
+                        {
+                            "receipe-headline": {
+                                "date": " April 05, 2018",
+                                "text": "Vegetarian Chese salad"
+                            }
+                        },
+                        {
+                            "receipe-duration": {
+                                "text": [
+                                    "prep : 15 mins",
+                                    "cook : 30 mins",
+                                    "Yields : 8 Servings"
+                                ]
+                            }
+                        },
+                        {
+                            "receipe-ratings": {
+                                "star": [
+                                    {
+                                        "class": "fa fa-star",
+                                        "aria-hidden": true
+                                    },
+                                    {
+                                        "class": "fa fa-star",
+                                        "aria-hidden": true
+                                    },
+                                    {
+                                        "class": "fa fa-star",
+                                        "aria-hidden": true
+                                    },
+                                    {
+                                        "class": "fa fa-star",
+                                        "aria-hidden": true
+                                    },
+                                    {
+                                        "class": "fa fa-star-o",
+                                        "aria-hidden": true
+                                    }
+                                ],
+                                "button": {
+                                    "class": "btn delicious-btn",
+                                    "text": "For Begginers",
+                                    "url": "#"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "single-preparation-step": [
+                        {
+                            "item": {
+                                "number": "01",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                            }
+                        },
+                        {
+                            "item": {
+                                "number": "02",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                            }
+                        },
+                        {
+                            "item": {
+                                "number": "03",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                            }
+                        },
+                        {
+                            "item": {
+                                "number": "04",
+                                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui.Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ingredients": [
+                        {
+                            "title": "Ingredients",
+                            "attr": [
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck1",
+                                    "label": "4 Tbsp (57 gr)"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck2",
+                                    "label": "2 large eggs"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck3",
+                                    "label": "2 yogurt containers granulated"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck4",
+                                    "label": "1 vanilla or plain yogurt, 170"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck5",
+                                    "label": "2 yogurt containers unbleached"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck6",
+                                    "label": "1.5 yogurt containers"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck7",
+                                    "label": "1/4 tsp cinnamon"
+                                },
+                                {
+                                    "name": "custom control",
+                                    "type": "checkbox",
+                                    "id": "customCheck8",
+                                    "label": "1 cup fresh blueberries"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "comment": [
+                        {
+                            "title": "Leave a comment",
+                            "form": [
+                                {
+                                    "method": "Post",
+                                    "attr": [
+                                        {
+                                            "input": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "name",
+                                                    "placeholder": "Name"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "email",
+                                                    "placeholder": "E-mail"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "subject",
+                                                    "placeholder": "Subject"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "textarea": {
+                                                "name": "message",
+                                                "id": "message",
+                                                "size": {
+                                                    "cols": "30",
+                                                    "rows": "10"
+                                                },
+                                                "placeholder": "Message"
+                                            }
+                                        },
+                                        {
+                                            "button": {
+                                                "class": "btn delicious-btn mt-30",
+                                                "type": "submit",
+                                                "text": "Post Comments"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "follow-us-instagram": [
+                {
+                    "title": "Follow Us Instagram",
+                    "attr": {
+                        "instaFeed": [
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta1.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta2.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta3.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta4.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta5.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta6.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "item": [
+                                    {
+                                        "img": "https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta7.jpg.pagespeed.ic.Gv_TFTVMhv.webp",
+                                        "icons": "fa fa-instagram"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "name": "footer-social-media",
+            "icon": [
+                {
+                    "name": "pinterest",
+                    "class": "fa fa-pinterest",
+                    "aria-hidden": true
+                },
+                {
+                    "name": "facebook",
+                    "class": "fa fa-facebook",
+                    "aria-hidden": true
+                },
+                {
+                    "name": "twitter",
+                    "class": "fa fa-twitter",
+                    "aria-hidden": true
+                },
+                {
+                    "name": "dribbble",
+                    "class": "fa fa-dribbble",
+                    "aria-hidden": true
+                },
+                {
+                    "name": "behance",
+                    "class": "fa fa-behance",
+                    "aria-hidden": true
+                },
+                {
+                    "name": "linkedin",
+                    "class": "fa fa-linkedin",
+                    "aria-hidden": true
+                }
+            ]
+        },
+        {
+            "name": "Footer-logo",
+            "url": "https://preview.colorlib.com/theme/delicious/index.html",
+            "img": "data:image/webp;base64,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"
+        },
+        {
+            "name": "Copyright",
+            "text": "Copyright ©2022 All rights reserved | This template is made with  by Colorlib",
+            "icons": "fa fa-heart-o"
+        }
+    ]
+}
